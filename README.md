@@ -66,12 +66,13 @@ function drawCustomInfoBackground(w:Number, h:Number, color:uint, alpha:Number, 
     infoBackground.graphics.drawRoundRect(-padding, -padding, w + padding*2, h + padding*2, 15);
     infoBackground.graphics.endFill();
 }
-
+```
 ### 🔸 Smooth Camera Interpolation
 ```actionscript
 camZoom += (targetZoom - camZoom) * LERP_RATE;
 centerX += (finalTargetX - centerX) * LERP_RATE;
 centerY += (finalTargetY - centerY) * LERP_RATE;
+```
 
 ### 🔸 Sun Glow with BlurFilter
 ```actionscript
