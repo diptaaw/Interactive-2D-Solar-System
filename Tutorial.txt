@@ -1,14 +1,3 @@
-#Smooth Camera Interpolation
-camZoom += (targetZoom - camZoom) * LERP_RATE;
-centerX += (finalTargetX - centerX) * LERP_RATE;
-centerY += (finalTargetY - centerY) * LERP_RATE;
-
-#Sun Glow with BlurFilter
-sunGlowLayer.graphics.beginFill(sunData.color, 0.08);
-sunGlowLayer.graphics.drawCircle(centerX, centerY, glowRadius);
-sunGlowLayer.graphics.endFill();
-sunGlowLayer.filters = [new BlurFilter(glowRadius * 0.2, glowRadius * 0.2, 2)];
-
 #Folder Structure
 📁 project_root/
 ├── main.as                # Main ActionScript file
