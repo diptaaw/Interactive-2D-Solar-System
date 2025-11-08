@@ -1,0 +1,33 @@
+#Smooth Camera Interpolation
+camZoom += (targetZoom - camZoom) * LERP_RATE;
+centerX += (finalTargetX - centerX) * LERP_RATE;
+centerY += (finalTargetY - centerY) * LERP_RATE;
+
+#Sun Glow with BlurFilter
+sunGlowLayer.graphics.beginFill(sunData.color, 0.08);
+sunGlowLayer.graphics.drawCircle(centerX, centerY, glowRadius);
+sunGlowLayer.graphics.endFill();
+sunGlowLayer.filters = [new BlurFilter(glowRadius * 0.2, glowRadius * 0.2, 2)];
+
+#Folder Structure
+📁 project_root/
+├── main.as                # Main ActionScript file
+├── assets/
+│   ├── sun_mc.fla
+│   ├── mercury_mc.fla
+│   ├── venus_mc.fla
+│   ├── earth_mc.fla
+│   └── mars_mc.fla
+├── README.md
+└── preview.gif             # (Optional) Add a GIF preview of the simulation
+
+#Getting Started
+Open the .fla file in Adobe Animate (ActionScript 3.0 document type).
+Ensure MovieClip linkages match the following names:
+sun_mc
+mercury_mc
+venus_mc
+earth_mc
+mars_mc
+Copy the main.as script into your project’s ActionScript file.
+Run the project (Ctrl + Enter) to view the simulation.
